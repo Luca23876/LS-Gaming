@@ -6,4 +6,6 @@ class WelcomeController < ApplicationController
 	def games		
 	end
 
+	def createanaccount		
+	end
 end
