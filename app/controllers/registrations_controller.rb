@@ -1,4 +1,4 @@
-class RegistrationsController < ApplicationsController
+class RegistrationsController < ApplicationController
 
 	def new
 	@user = User.new
@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationsController
 :password_confirmation))
 	if @user.save
 		session[:user_id] = @user.id
-		redirect_to welcome_index
+		redirect_to welcome/index
 	else
 	   render :new
 	end
