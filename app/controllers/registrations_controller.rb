@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationController
 :password_confirmation))
 	if @user.save
 		session[:user_id] = @user.id
-		redirect_to welcome/index
+		redirect_to index
 	else
 	   render :new
 	end

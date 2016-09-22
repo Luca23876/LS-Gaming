@@ -3,6 +3,14 @@
 
 <%= form_for @user, url: signup_path do |f|%>
 
+		<% if @user.errors.present? %>
+		<ul>
+		<% @user.errors.full_message.each do |message| %>
+				<li><%= message %></li>
+		<% end %>			
+		</ul>
+		<% end %>
+
 		<div>
 		<%= f.label :email %>	
 		</div>
