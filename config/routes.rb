@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 root "authentication#new"
+get '/minisoccer' => 'welcome#minisoccer', as: :minisoccer
 get '/games' => 'welcome#games', as: :gamingpage
 get '/welcome' => 'welcome#index', as: :mainpage
 get '/sign-up' => 'registrations#new', as: :signup

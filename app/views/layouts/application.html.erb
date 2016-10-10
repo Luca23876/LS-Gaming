@@ -10,15 +10,21 @@
   </head>
 
   <body>
-  	<div>
-  		<% if current_user %>
-  		<%= link_to "Sign Out", signout_path %>
-  		<% else %>
-      <%= link_to "Sign Up", signup_path %>
-      |
-  		<%= link_to "Sign In", signin_path %>
-  		<% end %>
-  	</div>
+    <div id="menu">
+      <div class="signOut">
+        <% if current_user %>
+        <%= link_to "Sign Out", signout_path %>
+        <% else %>
+        <%= link_to "Sign Up", signup_path %>
+        |
+        <%= link_to "Sign In", signin_path %>
+        <% end %>
+      </div>
+      <ul>
+      <li><a href="/welcome">Home</a></li>
+      <li><a href="/games">Games</a></li>
+      </ul>
+    </div>
     <%= yield %>
   </body>
 </html>
