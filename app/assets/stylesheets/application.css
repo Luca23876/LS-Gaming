@@ -21,7 +21,7 @@
     background-repeat: no-repeat;
     display: block;
     margin-left: auto;
-    margin-right: auto 
+    margin-right: auto; 
 }
 .background1 {
 	background-image: url(background.jpg);
@@ -29,7 +29,7 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
-.backgroundtwo {
+.background2 {
     background-image: url(Gaming_start_up_image.jpg);
     background-attachment: fixed;
     background-size: cover;
