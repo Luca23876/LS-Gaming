@@ -1,25 +1,19 @@
 <script type="text/javascript">
-$(document).ready(function() {
-	$('body').addClass('background1');	
-});
+	$(document).ready(function() {
+		$('body').addClass('background1');	
+	});
 
 </script>
-	<h1 class="textcolor-white">Welcome</h1>
-	<div class="container">
-			<div class="textcolor-white" id="todays-amazing-date">	</div>
-		<!--<form>
-			<label class="textcolor-white"> Password</label>
-			<input type="text" name="Password" id="Password-input">
-			<button id="submit-button">submit</button>
-		</form>-->
-		<script>
-			window.setInterval(function(){
-		  	var someDate = new Date();
-		  	(someDate)
-		  	document.getElementById("todays-amazing-date").innerHTML = someDate;
+<h1 class="textcolor-white">Welcome</h1>
+<div class="container">
+	<div class="textcolor-white" id="todays-amazing-date">	</div>
+	<script>
+		window.setInterval(function(){
+			var someDate = new Date();
+			(someDate)
+			document.getElementById("todays-amazing-date").innerHTML = someDate;
+		}, 1000);
+	</script>
+</div>
 
-			}, 1000);
-		</script>
-	</div>
 
-	<!--<iframe class="games" src="http://andkon.com/arcade/adventureaction/supermarioflashv3/"></iframe>-->	

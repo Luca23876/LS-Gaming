@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 root "authentication#new"
+get '/tic-tac-toe' => 'welcome#tic-tac-toe', as: :tic_tac_toe	
+get '/rockpaperscissors' => 'welcome#rockpaperscissors', as: :rockpaperscissors
 get '/totalwreckage' => 'welcome#totalwreckage', as: :totalwreckage
 get '/minisoccer' => 'welcome#minisoccer', as: :minisoccer
 get '/games' => 'welcome#games', as: :gamingpage
