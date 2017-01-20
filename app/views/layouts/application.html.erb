@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>LucasWebsite</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>LucasWebsite</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script>
+    window.setInterval(function(){
+        var someDate = new Date();
+        (someDate)
+        document.getElementById("todays-amazing-date").innerHTML = someDate;
+    }, 1000);
+</script>
+</head>
 
-  <body>
-    <div id="menu">
-      <div class="signOut">
-        <% if current_user %>
-        <%= link_to "Sign Out", signout_path %>
-        <% else %>
-        <%= link_to "Sign Up", signup_path %>
-        |
-        <%= link_to "Sign In", signin_path %>
-        <% end %>
-      </div>
-      <ul>
-      <li><a href="/welcome">Home</a></li>
-      <li><a href="/games">Games</a></li>
-      </ul>
+<body>
+  <% if !current_user %>
+  <div class="signOut">
+     <%= link_to "Sign Up", signup_path %>
+     |
+     <%= link_to "Sign In", signin_path %>
+ </div>
+ <% else %>
+ <div id="menu">
+    <div class="row">
+        <ul>
+        <div class="signOut">
+            <%= link_to "Sign Out", signout_path %>
+            <div class="textcolor-white" id="todays-amazing-date" align="right">  </div>
+        </div>
+            <li><a href="/welcome">Home</a></li>
+            <li><a href="/games">Games</a></li>
+        </ul>
     </div>
-    <%= yield %>
-  </body>
+</div>
+<% end %>
+<%= yield %>
+</body>
 </html>
